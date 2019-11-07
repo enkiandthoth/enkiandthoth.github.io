@@ -1,0 +1,1069 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.56355,13.882979999999998 ]
+    },
+    "properties": {
+    "FIELD1":0,
+    "uid":"",
+    "minitrip":2,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":270,
+    "carstopped":"NO",
+    "logtime":8,
+    "day":"Sunday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.56437,13.88348 ]
+    },
+    "properties": {
+    "FIELD1":1,
+    "uid":"",
+    "minitrip":3,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":29,
+    "carstopped":"NO",
+    "logtime":8,
+    "day":"Sunday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.56362,13.88166 ]
+    },
+    "properties": {
+    "FIELD1":2,
+    "uid":"",
+    "minitrip":4,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":13936,
+    "carstopped":"NO",
+    "logtime":12,
+    "day":"Sunday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.60949,13.84695 ]
+    },
+    "properties": {
+    "FIELD1":3,
+    "uid":"",
+    "minitrip":5,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":6750,
+    "carstopped":"NO",
+    "logtime":15,
+    "day":"Sunday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.60938,13.84728 ]
+    },
+    "properties": {
+    "FIELD1":4,
+    "uid":"",
+    "minitrip":6,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":44715,
+    "carstopped":"NO",
+    "logtime":3,
+    "day":"Monday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.60974,13.84724 ]
+    },
+    "properties": {
+    "FIELD1":5,
+    "uid":"",
+    "minitrip":7,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":62,
+    "carstopped":"NO",
+    "logtime":7,
+    "day":"Monday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.60168,14.0736 ]
+    },
+    "properties": {
+    "FIELD1":6,
+    "uid":"",
+    "minitrip":8,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":16269,
+    "carstopped":"NO",
+    "logtime":13,
+    "day":"Monday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.60343,14.07005 ]
+    },
+    "properties": {
+    "FIELD1":7,
+    "uid":"",
+    "minitrip":9,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":8217,
+    "carstopped":"NO",
+    "logtime":15,
+    "day":"Monday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.54373,13.72009 ]
+    },
+    "properties": {
+    "FIELD1":8,
+    "uid":"",
+    "minitrip":10,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":10456,
+    "carstopped":"NO",
+    "logtime":19,
+    "day":"Monday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.60187,13.84574 ]
+    },
+    "properties": {
+    "FIELD1":9,
+    "uid":"",
+    "minitrip":11,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":724,
+    "carstopped":"NO",
+    "logtime":20,
+    "day":"Monday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.60945,13.84705 ]
+    },
+    "properties": {
+    "FIELD1":10,
+    "uid":"",
+    "minitrip":12,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":11145,
+    "carstopped":"NO",
+    "logtime":23,
+    "day":"Monday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.60939,13.84705 ]
+    },
+    "properties": {
+    "FIELD1":11,
+    "uid":"",
+    "minitrip":13,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":5165,
+    "carstopped":"NO",
+    "logtime":9,
+    "day":"Tuesday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.54305,13.76176 ]
+    },
+    "properties": {
+    "FIELD1":12,
+    "uid":"",
+    "minitrip":14,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":12947,
+    "carstopped":"NO",
+    "logtime":13,
+    "day":"Tuesday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.49011,13.75654 ]
+    },
+    "properties": {
+    "FIELD1":13,
+    "uid":"",
+    "minitrip":15,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":23998,
+    "carstopped":"NO",
+    "logtime":20,
+    "day":"Tuesday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.60932,13.84704 ]
+    },
+    "properties": {
+    "FIELD1":14,
+    "uid":"",
+    "minitrip":16,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":14720,
+    "carstopped":"NO",
+    "logtime":1,
+    "day":"Wednesday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.60837,13.84769 ]
+    },
+    "properties": {
+    "FIELD1":15,
+    "uid":"",
+    "minitrip":17,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":8700,
+    "carstopped":"NO",
+    "logtime":7,
+    "day":"Wednesday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.59287,14.06026 ]
+    },
+    "properties": {
+    "FIELD1":16,
+    "uid":"",
+    "minitrip":18,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":2950,
+    "carstopped":"NO",
+    "logtime":9,
+    "day":"Wednesday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.61035,13.85791 ]
+    },
+    "properties": {
+    "FIELD1":17,
+    "uid":"",
+    "minitrip":19,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":8506,
+    "carstopped":"NO",
+    "logtime":12,
+    "day":"Wednesday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.60835,13.84779 ]
+    },
+    "properties": {
+    "FIELD1":18,
+    "uid":"",
+    "minitrip":20,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":68858,
+    "carstopped":"NO",
+    "logtime":7,
+    "day":"Thursday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.60229,14.07361 ]
+    },
+    "properties": {
+    "FIELD1":19,
+    "uid":"",
+    "minitrip":21,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":60,
+    "carstopped":"NO",
+    "logtime":8,
+    "day":"Thursday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.60255,14.07384 ]
+    },
+    "properties": {
+    "FIELD1":20,
+    "uid":"",
+    "minitrip":22,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":23257,
+    "carstopped":"NO",
+    "logtime":15,
+    "day":"Thursday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.5737,13.86775 ]
+    },
+    "properties": {
+    "FIELD1":21,
+    "uid":"",
+    "minitrip":23,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":8424,
+    "carstopped":"NO",
+    "logtime":18,
+    "day":"Thursday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.61052,13.84724 ]
+    },
+    "properties": {
+    "FIELD1":22,
+    "uid":"",
+    "minitrip":24,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":359,
+    "carstopped":"NO",
+    "logtime":18,
+    "day":"Thursday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.60936,13.847370000000002 ]
+    },
+    "properties": {
+    "FIELD1":23,
+    "uid":"",
+    "minitrip":25,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":118,
+    "carstopped":"NO",
+    "logtime":18,
+    "day":"Thursday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.60884,13.846520000000002 ]
+    },
+    "properties": {
+    "FIELD1":24,
+    "uid":"",
+    "minitrip":26,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":6180,
+    "carstopped":"NO",
+    "logtime":6,
+    "day":"Friday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.48942,13.757879999999998 ]
+    },
+    "properties": {
+    "FIELD1":25,
+    "uid":"",
+    "minitrip":27,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":47760,
+    "carstopped":"NO",
+    "logtime":20,
+    "day":"Friday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.50342,13.76995 ]
+    },
+    "properties": {
+    "FIELD1":26,
+    "uid":"",
+    "minitrip":28,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":1904,
+    "carstopped":"NO",
+    "logtime":21,
+    "day":"Friday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.60944,13.84734 ]
+    },
+    "properties": {
+    "FIELD1":27,
+    "uid":"",
+    "minitrip":29,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":31,
+    "carstopped":"NO",
+    "logtime":22,
+    "day":"Friday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.60929,13.847270000000002 ]
+    },
+    "properties": {
+    "FIELD1":28,
+    "uid":"",
+    "minitrip":30,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":25742,
+    "carstopped":"NO",
+    "logtime":6,
+    "day":"Saturday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.60916,13.84712 ]
+    },
+    "properties": {
+    "FIELD1":29,
+    "uid":"",
+    "minitrip":31,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":1108,
+    "carstopped":"NO",
+    "logtime":6,
+    "day":"Saturday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.61024,13.84827 ]
+    },
+    "properties": {
+    "FIELD1":30,
+    "uid":"",
+    "minitrip":32,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":44519,
+    "carstopped":"NO",
+    "logtime":18,
+    "day":"Saturday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.61075,13.847129999999998 ]
+    },
+    "properties": {
+    "FIELD1":31,
+    "uid":"",
+    "minitrip":33,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":590,
+    "carstopped":"NO",
+    "logtime":19,
+    "day":"Saturday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.60927,13.84704 ]
+    },
+    "properties": {
+    "FIELD1":32,
+    "uid":"",
+    "minitrip":34,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":10004,
+    "carstopped":"NO",
+    "logtime":21,
+    "day":"Saturday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.60925,13.84664 ]
+    },
+    "properties": {
+    "FIELD1":33,
+    "uid":"",
+    "minitrip":35,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":54262,
+    "carstopped":"NO",
+    "logtime":13,
+    "day":"Sunday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.61043,13.85794 ]
+    },
+    "properties": {
+    "FIELD1":34,
+    "uid":"",
+    "minitrip":36,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":5344,
+    "carstopped":"NO",
+    "logtime":14,
+    "day":"Sunday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.61353,13.86082 ]
+    },
+    "properties": {
+    "FIELD1":35,
+    "uid":"",
+    "minitrip":37,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":4342,
+    "carstopped":"NO",
+    "logtime":17,
+    "day":"Sunday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.60935,13.84698 ]
+    },
+    "properties": {
+    "FIELD1":36,
+    "uid":"",
+    "minitrip":38,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":9820,
+    "carstopped":"NO",
+    "logtime":20,
+    "day":"Sunday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.60931,13.84704 ]
+    },
+    "properties": {
+    "FIELD1":37,
+    "uid":"",
+    "minitrip":39,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":13710,
+    "carstopped":"NO",
+    "logtime":6,
+    "day":"Monday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.4898,13.75767 ]
+    },
+    "properties": {
+    "FIELD1":38,
+    "uid":"",
+    "minitrip":40,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":21222,
+    "carstopped":"NO",
+    "logtime":13,
+    "day":"Monday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.50571,13.76463 ]
+    },
+    "properties": {
+    "FIELD1":39,
+    "uid":"",
+    "minitrip":41,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":131,
+    "carstopped":"NO",
+    "logtime":14,
+    "day":"Monday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.60225,14.073570000000002 ]
+    },
+    "properties": {
+    "FIELD1":40,
+    "uid":"",
+    "minitrip":42,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":11061,
+    "carstopped":"NO",
+    "logtime":17,
+    "day":"Monday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.60616,13.86912 ]
+    },
+    "properties": {
+    "FIELD1":41,
+    "uid":"",
+    "minitrip":43,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":3758,
+    "carstopped":"NO",
+    "logtime":18,
+    "day":"Monday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.60741,13.85334 ]
+    },
+    "properties": {
+    "FIELD1":42,
+    "uid":"",
+    "minitrip":44,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":289,
+    "carstopped":"NO",
+    "logtime":19,
+    "day":"Monday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.60953,13.8475 ]
+    },
+    "properties": {
+    "FIELD1":43,
+    "uid":"",
+    "minitrip":45,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":146,
+    "carstopped":"NO",
+    "logtime":19,
+    "day":"Monday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.60946,13.847129999999998 ]
+    },
+    "properties": {
+    "FIELD1":44,
+    "uid":"",
+    "minitrip":46,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":28544,
+    "carstopped":"NO",
+    "logtime":10,
+    "day":"Tuesday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.61058,13.85823 ]
+    },
+    "properties": {
+    "FIELD1":45,
+    "uid":"",
+    "minitrip":47,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":5287,
+    "carstopped":"NO",
+    "logtime":12,
+    "day":"Tuesday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.32554,13.79642 ]
+    },
+    "properties": {
+    "FIELD1":46,
+    "uid":"",
+    "minitrip":48,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":8761,
+    "carstopped":"NO",
+    "logtime":15,
+    "day":"Tuesday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.49007,13.75726 ]
+    },
+    "properties": {
+    "FIELD1":47,
+    "uid":"",
+    "minitrip":49,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":16970,
+    "carstopped":"NO",
+    "logtime":20,
+    "day":"Tuesday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.60935,13.84731 ]
+    },
+    "properties": {
+    "FIELD1":48,
+    "uid":"",
+    "minitrip":50,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":5494,
+    "carstopped":"NO",
+    "logtime":23,
+    "day":"Tuesday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.6095,13.847320000000002 ]
+    },
+    "properties": {
+    "FIELD1":49,
+    "uid":"",
+    "minitrip":51,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":9748,
+    "carstopped":"NO",
+    "logtime":7,
+    "day":"Wednesday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.60165,14.07366 ]
+    },
+    "properties": {
+    "FIELD1":50,
+    "uid":"",
+    "minitrip":52,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":5332,
+    "carstopped":"NO",
+    "logtime":10,
+    "day":"Wednesday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.59805,14.07589 ]
+    },
+    "properties": {
+    "FIELD1":51,
+    "uid":"",
+    "minitrip":53,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":720,
+    "carstopped":"NO",
+    "logtime":10,
+    "day":"Wednesday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.60155,14.07346 ]
+    },
+    "properties": {
+    "FIELD1":52,
+    "uid":"",
+    "minitrip":54,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":22653,
+    "carstopped":"NO",
+    "logtime":16,
+    "day":"Wednesday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.59927,14.06713 ]
+    },
+    "properties": {
+    "FIELD1":53,
+    "uid":"",
+    "minitrip":55,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":3991,
+    "carstopped":"NO",
+    "logtime":18,
+    "day":"Wednesday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.60944,13.84754 ]
+    },
+    "properties": {
+    "FIELD1":54,
+    "uid":"",
+    "minitrip":56,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":12216,
+    "carstopped":"NO",
+    "logtime":22,
+    "day":"Wednesday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.60918,13.84658 ]
+    },
+    "properties": {
+    "FIELD1":55,
+    "uid":"",
+    "minitrip":57,
+    "enginestate":"MINISTOP",
+    "starttime":"0",
+    "stoptime":"0",
+    "duration":14322,
+    "carstopped":"NO",
+    "logtime":7,
+    "day":"Thursday"
+    }
+  }
+]
+}

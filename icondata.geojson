@@ -1,0 +1,314 @@
+{
+    "type": "FeatureCollection",
+    "features": [{
+        "type": "Feature",
+        "properties": {
+            "description": "<p><strong>TU Dome Plaza</strong></p>",
+            "icon": "theatre"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [100.600115,14.065]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "description": "<p><strong>TU U-House</strong></p>",
+            "icon": "music"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [100.6093367,14.06608333]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "description": "<p><strong>BU-Greenish</strong></p>",
+            "icon": "music"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [100.6091093 ,14.0409467]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "description": "<p><strong>Lotus Express - Rangsit Pirom</strong></p>",
+            "icon": "music"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [100.616022,14.041147]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "description": "<p><strong>Future Park</strong></p>",
+            "icon": "music"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [100.616988,13.990916]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "description": "<p><strong>RSU Soi Venda</strong></p>",
+            "icon": "music"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [100.589815,13.965993]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "description": "<p><strong>RSU Parking lot</strong></p>",
+            "icon": "music"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [100.5789631,13.9608399]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "description": "<p><strong>Rian Thong Market</strong></p>",
+            "icon": "music"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [100.7321036,14.0360011]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "description": "<p><strong>Donmueng Airport</strong></p>",
+            "icon": "music"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [100.601703,13.920828]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "description": "<p><strong>Lotus Express - Wat Lad Pla Duek</strong></p>",
+            "icon": "music"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [100.395417,13.907828]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "description": "<p><strong>MRT Talad Bang Yai</strong></p>",
+            "icon": "music"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [100.408497,13.879765]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "description": "<p><strong>Chaengwattana - Shell</strong></p>",
+            "icon": "music"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [100.569493,13.890507]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "description": "<p><strong>Lotus Express - Nichada Thani</strong></p>",
+            "icon": "music"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [100.522874,13.885462]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "description": "<p><strong>Ngamwongwan 29</strong></p>",
+            "icon": "music"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [100.540217,13.857298]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "description": "<p><strong>KU โรงอาหารกลาง 2</strong></p>",
+            "icon": "music"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [100.5709859,13.8521018]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "description": "<p><strong>Ngamwongwan 56 (KU) </strong></p>",
+            "icon": "music"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [100.5725489,13.8407548]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "description": "<p><strong>MRT Taopoon Exit 3</strong></p>",
+            "icon": "music"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [100.5305084,13.8078889]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "description": "<p><strong>MRT Bangsue Exit 1</strong></p>",
+            "icon": "music"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [100.538993,13.802467]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "description": "<p><strong>The Wiz (Mrt ratchada) </strong></p>",
+            "icon": "music"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [100.574515,13.799777]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "description": "<p><strong>MRT Sutthisan Exit 4</strong></p>",
+            "icon": "music"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [100.5738126,13.7891344]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "description": "<p><strong>BTS Ari - Shell</strong></p>",
+            "icon": "music"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [100.544236,13.779891]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "description": "<p><strong>Sermsrap Building</strong></p>",
+            "icon": "music"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [100.573538,13.779738]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "description": "<p><strong>BTS-Sanam-Pao-Exit4</strong></p>",
+            "icon": "music"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [100.542246513069,13.772801315355]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "description": "<p><strong>The Street Ratchada</strong></p>",
+            "icon": "music"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [100.5722782,13.7705118]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "description": "<p><strong>Lotus Town in Town</strong></p>",
+            "icon": "music"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [100.6107,13.7737512]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "description": "<p><strong>Major Cineplex Pinklao</strong></p>",
+            "icon": "music"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [100.478212,13.779391]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "description": "<p><strong>Kloem Hostel - Soi Phetchaburi 5</strong></p>",
+            "icon": "music"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [100.527537,13.758154]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "description": "<p><strong>Airport link phayathai</strong></p>",
+            "icon": "music"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [100.5344864,13.75663463]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "description": "<p><strong>IDEO Mobi Rama 9</strong></p>",
+            "icon": "music"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [100.5657606,13.755754]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "description": "<p><strong>Holiday Inn Express Siam</strong></p>",
+            "icon": "music"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [100.544236,13.779891]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "description": "<p><strong>CU-Terrace</strong></p>",
+            "icon": "music"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [100.523985,13.741062]
+        }
+    }]
+}
