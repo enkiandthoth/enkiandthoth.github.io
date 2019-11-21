@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8' />
+  <title>HAUPcar Data visualization</title>
+  <meta name='robots' content='noindex, nofollow'>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.2/dist/Chart.min.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Helvetica Neue', Helvetica, Arial, Sans-serif;
+    }
+    #map {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+    h1 {
+      font-size: 20px;
+      line-height: 30px;
+      text-align: center;
+    }
+    h2 {
+      font-size: 14px;
+      line-height: 20px;
+      margin-bottom: 10px;
+    }
+    a {
+      text-decoration: none;
+      color: #2DC4B2;
+    }
+    #console {
+      position: absolute;
+      width: 230px;
+      margin: 5px;
+      padding: 1px 5px;
+      background-color: rgb(87, 85, 85);
+      border-radius: 10px;
+      top: 7px;
+      left: 6px;
+    }
+    .session {
+      margin-bottom: 9px;
+    }
+    .row {
+      height: 12px;
+      width: 100%;
+    }
+    .colors {
+      background: linear-gradient(to right, rgb(133, 177, 172), rgb(78, 213, 231), rgb(240, 201, 142), rgb(250, 182, 56), rgb(240, 70, 70), rgb(255, 1, 1));
+      margin-bottom: 5px;
+    }
+    .label {
+      width: 15%;
+      display: inline-block;
+      text-align: center;
+    }
+
+    #console2 {
+      position: absolute;
+      width: 400px;
+      margin: 5px;
+      padding: 10px 5px;
+      background-color: rgba(32, 32, 32, 0.85);
+      border-radius: 10px;
+      top: 248px;
+      right: 6px;
+    }
+    .session2 {
+      margin-bottom: 9px;
+    }
+    .row2 {
+      height: 12px;
+      width: 100%;
+    }
+    .colors2 {
+      background: linear-gradient(to right, rgb(133, 177, 172), rgb(78, 213, 231), rgb(240, 201, 142), rgb(250, 182, 56), rgb(240, 70, 70), rgb(255, 1, 1));
+      margin-bottom: 5px;
+    }
+    .label2 {
+      width: 15%;
+      display: inline-block;
+      text-align: center;
+    }
+
+    #console3 {
+      position: absolute;
+      width: 400px;
+      margin: 5px;
+      padding: 1px 5px;
+      background-color: rgba(32, 32, 32, 0.85);
+      border-radius: 10px;
+      top: 8px;
+      right: 6px;
+    }
+    .session3 {
+      margin-bottom: 9px;
+    }
+    .row3 {
+      height: 12px;
+      width: 100%;
+    }
+    .colors3 {
+      background: linear-gradient(to right, rgb(133, 177, 172), rgb(78, 213, 231), rgb(240, 201, 142), rgb(250, 182, 56), rgb(240, 70, 70), rgb(255, 1, 1));
+      margin-bottom: 5px;
+    }
+    .label3 {
+      width: 15%;
+      display: inline-block;
+      text-align: center;
+    }
+
+      #menu {
+          background: #fff;
+          position: absolute;
+          z-index: 1;
+          top: 350px;
+          left: 10.5px;
+          border-radius: 3px;
+          width: 120px;
+          border: 1px solid rgba(0,0,0,0.4);
+          font-family: 'Open Sans', sans-serif;
+      }
+
+      #menu a {
+          font-size: 13px;
+          color: #404040;
+          display: block;
+          margin: 0;
+          padding: 0;
+          padding: 10px;
+          text-decoration: none;
+          border-bottom: 1px solid rgba(0,0,0,0.25);
+          text-align: center;
+      }
+
+      #menu a:last-child {
+          border: none;
+      }
+
+      #menu a:hover {
+          background-color: #f8f8f8;
+          color: #404040;
+      }
+
+      #menu a.active {
+          background-color: rgb(87, 85, 85);
+          color: #ffffff;
+      }
+
+      #menu a.active:hover {
+          background: #3074a4;
+      }
+
+      #menu2 {
+          background: #fff;
+          position: absolute;
+          z-index: 1;
+          top: 630px;
+          left: 10.5px;
+          border-radius: 3px;
+          width: 120px;
+          border: 1px solid rgba(0,0,0,0.4);
+          font-family: 'Open Sans', sans-serif;
+      }
+
+      #menu2 a {
+          font-size: 13px;
+          color: #404040;
+          display: block;
+          margin: 0;
+          padding: 0;
+          padding: 10px;
+          text-decoration: none;
+          border-bottom: 1px solid rgba(0,0,0,0.25);
+          text-align: center;
+      }
+
+      #menu2 a:last-child {
+          border: none;
+      }
+
+      #menu2 a:hover {
+          background-color: #f8f8f8;
+          color: #404040;
+      }
+
+      #menu2 a.active {
+          background-color: rgb(87, 85, 85);
+          color: #ffffff;
+      }
+
+      #menu2 a.active:hover {
+          background: #3074a4;
+      }
+
+</style>
+
+<style>
+  .mapboxgl-popup {
+      max-width: 400px;
+      font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  }
+</style>
+<nav id="menu"></nav>
+
+<nav id="menu2"></nav>
+
+
+</head>
+
+<body>
+<script src='https://d3js.org/d3.v3.min.js' charset='utf-8'></script>
+   <div id='map'></div>
+   <div id='console'>
+    <h1 style="color:rgb(255, 255, 255);">HAUP car data visualization</h1>
+    <div class='session'>
+      <h5 style="color:rgb(255, 255, 255);">Ministops: (Mins)</h5>
+      <div class='row colors'>
+      </div>
+      <div class='row labels'>
+        <div class='label'>0</div>
+        <div class='label'>15</div>
+        <div class='label'>30</div>
+        <div class='label'>45</div>
+        <div class='label'>60</div>
+        <div class='label'>75+</div>
+      </div>
+    </div>
+    <div class='session' id='sliderbar'>
+      <h5 style="color:rgb(255, 255, 255);">HEATMAP: (Hourly): <label id='active-hour'>12PM</label></h5>
+      <input id='slider' class='row' type='range' min='0' max='23' step='1' value='12' />
+    </div>
+    <div class='session'>
+      <h5 style="color:rgb(255, 255, 255);">Day of the week</h5>
+      <div class='row' id='filters'>
+        <input id='all' type='radio' name='toggle' value='all' checked='checked'>
+        <label for='all' style="color:rgb(255, 255, 255); ">All</label>
+        <input id='weekday' type='radio' name='toggle' value='weekday'>
+        <label for='weekday' style="color:rgb(255, 255, 255);">Weekday</label>
+        <input id='weekend' type='radio' name='toggle' value='weekend'>
+        <label for='weekend' style="color:rgb(255, 255, 255);">Weekend</label>
+      </div>
+    </div>
+  </div>
+
+  <div id='console2'>
+      <canvas id="bar-chart-grouped" width="800" height="460"></canvas>
+
+  </div>
+
+  <div id='console3'>
+      <canvas id="line-chart2" width="800" height="460"></canvas>
+  </div>
+
+
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1Ijoic2hhaHVkIiwiYSI6ImNrMHZ4MjNsbDAxZ3IzZ29kdzdoamdpdGUifQ.Ovvv6e3tJd9gS8ZbCq2Vpw';
+    // This adds the map to your page
+
+    var map = new mapboxgl.Map({
+      container: 'map', // container id specified in the HTML
+      style: 'mapbox://styles/shahud/ck24ah1hk1n041cnxawgecmuu', // style URL
+      center: [100.5591349, 13.7909375], // initial map center in [lon, lat]
+      zoom: 12
+    });
+
+    var size = 200;
+
+var pulsingDot = {
+    width: size,
+    height: size,
+    data: new Uint8Array(size * size * 4),
+
+    onAdd: function() {
+        var canvas = document.createElement('canvas');
+        canvas.width = this.width;
+        canvas.height = this.height;
+        this.context = canvas.getContext('2d');
+    },
+
+    render: function() {
+        var duration = 1000;
+        var t = (performance.now() % duration) / duration;
+
+        var radius = size / 5 * 0.3;
+        var outerRadius = size / 8 * 0.7 * t + radius;
+        var context = this.context;
+
+        // draw outer circle
+        context.clearRect(0, 0, this.width, this.height);
+        context.beginPath();
+        context.arc(this.width / 2, this.height / 2, outerRadius, 0, Math.PI * 2);
+        context.fillStyle = 'rgba(200, 235, 255,' + (1 - t) + ')';
+        context.fill();
+
+        // draw inner circle
+        context.beginPath();
+        context.arc(this.width / 2, this.height / 2, radius, 0, Math.PI * 2);
+        context.fillStyle = 'rgba(0, 6, 189, 1)';
+        context.strokeStyle = 'white';
+        context.lineWidth = 2 + 4 * (1 - t);
+        context.fill();
+        context.stroke();
+
+        // update this image's data with data from the canvas
+        this.data = context.getImageData(0, 0, this.width, this.height).data;
+
+        // keep the map repainting
+        map.triggerRepaint();
+
+        // return `true` to let the map know that the image was updated
+        return true;
+    }
+};
+
+var url = 'https://wanderdrone.appspot.com/';
+
+var car1url = 'https://raw.githubusercontent.com/shahud1/shahud1.github.io/master/car1latest.geojson';
+var car2url = 'https://raw.githubusercontent.com/shahud1/shahud1.github.io/master/car2latest.geojson';
+var car1today = 'https://raw.githubusercontent.com/shahud1/shahud1.github.io/master/car1today.geojson'
+var car2today = 'https://raw.githubusercontent.com/shahud1/shahud1.github.io/master/car2today.geojson'
+map.on('load', function () {
+
+  window.setInterval(function() {
+        map.getSource('Car1').setData(car1url);
+        map.getSource('Car2').setData(car2url)
+        map.getSource('Day1').setData(car1today)
+        map.getSource('Day2').setData(car2today)
+    }, 2000);
+
+
+var filterHour = ['==', ['number',['get', 'logtime']], 12];
+var filterDay = ['!=', ['string',['get', 'day']], 'placeholder'];
+
+
+
+d3.json('icondata.geojson', function(err, dataset) {
+if (err) throw err;
+
+map.loadImage('haup.png', function(error, image) {
+      if (error) throw error;
+          map.addImage('cat', image);
+
+
+    // Add a layer showing the places.
+    map.addSource('HAUPcar stations', { type: 'geojson', data: dataset });
+
+    map.addLayer({
+        "id": "HAUPcar stations",
+        "type": "symbol",
+        "source": "HAUPcar stations",
+        "layout": {
+            "icon-image": "cat",
+            "icon-allow-overlap": true,
+            "icon-size": 0.07
+        }
+});
+
+
+
+    map.on('click', 'HAUPcar stations', function (e) {
+        var coordinates = e.features[0].geometry.coordinates.slice();
+        var description = e.features[0].properties.description;
+
+        while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+            coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+        }
+
+        new mapboxgl.Popup()
+            .setLngLat(coordinates)
+            .setHTML(description)
+            .addTo(map);
+    });
+
+    // Change the cursor to a pointer when the mouse is over the places layer.
+    map.on('mouseenter', 'HAUPcar stations', function () {
+        map.getCanvas().style.cursor = 'pointer';
+    });
+
+    // Change it back to a pointer when it leaves.
+    map.on('mouseleave', 'HAUPcar stations', function () {
+        map.getCanvas().style.cursor = '';
+    });
+});
+
+
+});
+
+
+      map.addSource('hourly', {
+        type: 'geojson',
+        lineMetrics: true,
+        //data: 'https://dl.dropboxusercontent.com/s/60twdtgl92g9rsl/demo33.geojson'
+        //data: 'demo3mini.geojson'
+
+      });
+      map.addLayer({
+        id: 'Heatmap',
+        type: 'heatmap',
+        source: 'hourly',
+        maxzoom: 24,
+        paint: {
+          // Increase the heatmap weight based on frequency and property magnitude
+          "heatmap-weight": [
+            "interpolate",
+            ["linear"],
+            ["get", "logtime"],
+            0, 0,
+            23, 1
+          ],
+          // Increase the heatmap color weight weight by zoom level
+          // heatmap-intensity is a multiplier on top of heatmap-weight
+          "heatmap-intensity": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            0, 1,
+            9, 1
+          ],
+          // Color ramp for heatmap.  Domain is 0 (low) to 1 (high).
+          // Begin color ramp at 0-stop with a 0-transparancy color
+          // to create a blur-like effect.
+          "heatmap-color": [
+            "interpolate",
+            ["linear"],
+            ["heatmap-density"],
+            0, "rgba(33,102,172,0)",
+            0.2, "rgb(103,169,207)",
+            0.4, "rgb(209,229,240)",
+            0.6, "rgb(253,219,199)",
+            0.8, "rgb(239,138,98)",
+            1, "rgb(178,24,43)"
+          ],
+          // Adjust the heatmap radius by zoom level
+          "heatmap-radius": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            0, 2,
+            9, 10
+          ],
+          //Transition from heatmap to circle layer by zoom level
+          "heatmap-opacity": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            2, 1,
+            24, 0
+          ],
+        },
+        'filter': ['==', ['number', ['get', 'logtime']], 12]
+      });
+
+
+    // Add a geojson point source.
+    // Heatmap layers also work with a vector tile source.
+    map.addSource('earthquakes', {
+        "type": "geojson",
+        "data": "minitrips.geojson"
+    });
+
+    map.addLayer({
+        "id": "Mini stops",
+        "type": "circle",
+        "source": "earthquakes",
+        "minzoom": 2,
+        "paint": {
+            // Size circle radius by earthquake magnitude and zoom level
+            "circle-radius": [
+                "interpolate",
+                ["linear"],
+                ["zoom"],
+                7, [
+                    "interpolate",
+                    ["linear"],
+                    ["get", "duration"],
+                    1, 1,
+                    6, 4
+                ],
+                16, [
+                    "interpolate",
+                    ["linear"],
+                    ["get", "duration"],
+                    800, 2,
+                    40000, 10
+                ]
+            ],
+            // Color circle by earthquake magnitude
+            "circle-color": [
+                "interpolate",
+                ["linear"],
+                ["get", "duration"],
+                8000, "rgba(33,102,172,0)",
+                15000, "rgb(103,169,207)",
+                25000, "rgb(209,229,240)",
+                30000, "rgb(253,219,199)",
+                35000, "rgb(239,138,98)",
+                40000, "rgb(178,24,43)"
+            ],
+            "circle-stroke-color": "white",
+            "circle-stroke-width": 0.1,
+
+        }
+    }, 'waterway-label');
+
+
+    //Car 1 ministop times
+
+    map.addSource('car1totalministops', {
+        "type": "geojson",
+        "data": "car1ministopstotal.geojson"
+    });
+
+    map.addLayer({
+        "id": "Car1 Mini stops",
+        "type": "circle",
+        "source": "car1totalministops",
+        "minzoom": 2,
+        "paint": {
+            // Size circle radius by earthquake magnitude and zoom level
+            "circle-radius": [
+                "interpolate",
+                ["linear"],
+                ["zoom"],
+                7, [
+                    "interpolate",
+                    ["linear"],
+                    ["get", "duration"],
+                    1, 1,
+                    6, 4
+                ],
+                16, [
+                    "interpolate",
+                    ["linear"],
+                    ["get", "duration"],
+                    800, 2,
+                    40000, 10
+                ]
+            ],
+            // Color circle by earthquake magnitude
+            "circle-color": [
+                "interpolate",
+                ["linear"],
+                ["get", "duration"],
+                8000, "rgba(33,102,172,0)",
+                15000, "rgb(103,169,207)",
+                25000, "rgb(209,229,240)",
+                30000, "rgb(253,219,199)",
+                35000, "rgb(239,138,98)",
+                40000, "rgb(178,24,43)"
+            ],
+            "circle-stroke-color": "white",
+            "circle-stroke-width": 0.1,
+
+        }
+    }, 'waterway-label');
+
+    //Car 2 ministop times
+
+    map.addSource('car2totalministops', {
+        "type": "geojson",
+        "data": "car2ministopstotal.geojson"
+    });
+
+    map.addLayer({
+        "id": "Car2 Mini stops",
+        "type": "circle",
+        "source": "car2totalministops",
+        "minzoom": 2,
+        "paint": {
+            // Size circle radius by earthquake magnitude and zoom level
+            "circle-radius": [
+                "interpolate",
+                ["linear"],
+                ["zoom"],
+                7, [
+                    "interpolate",
+                    ["linear"],
+                    ["get", "duration"],
+                    1, 1,
+                    6, 4
+                ],
+                16, [
+                    "interpolate",
+                    ["linear"],
+                    ["get", "duration"],
+                    800, 2,
+                    40000, 10
+                ]
+            ],
+            // Color circle by earthquake magnitude
+            "circle-color": [
+                "interpolate",
+                ["linear"],
+                ["get", "duration"],
+                8000, "rgba(33,102,172,0)",
+                15000, "rgb(103,169,207)",
+                25000, "rgb(209,229,240)",
+                30000, "rgb(253,219,199)",
+                35000, "rgb(239,138,98)",
+                40000, "rgb(178,24,43)"
+            ],
+            "circle-stroke-color": "white",
+            "circle-stroke-width": 0.1,
+
+        }
+    }, 'waterway-label');
+
+//d3.json('car1latest.geojson', function(err, geojson) {
+//      if (err) throw err;
+
+    map.addImage('pulsing-dot', pulsingDot, { pixelRatio: 2 });
+
+    map.addSource('Car1', {
+          type: 'geojson',
+          lineMetrics: true,
+          data: car1url
+      });
+
+    map.addLayer({
+        "id": "Car1 LIVE Location",
+        "type": "symbol",
+        "source": "Car1",
+        "layout": {
+            "icon-image": "pulsing-dot"
+        }
+    });
+//});
+
+map.on('click', 'Car2 LIVE Location', function (e) {
+new mapboxgl.Popup()
+.setLngLat(e.lngLat)
+//.setHTML(e.features[0].properties.logtime)
+.setHTML('<h3> Car2 <h3>')
+.addTo(map);
+});
+
+// Change the cursor to a pointer when the mouse is over the states layer.
+map.on('mouseenter', 'states-layer', function () {
+map.getCanvas().style.cursor = 'pointer';
+});
+
+// Change it back to a pointer when it leaves.
+map.on('mouseleave', 'states-layer', function () {
+map.getCanvas().style.cursor = '';
+});
+
+////
+
+map.on('click', 'Car1 LIVE Location', function (e) {
+new mapboxgl.Popup()
+.setLngLat(e.lngLat)
+.setHTML('<h3> Car1 <h3>')
+.addTo(map);
+});
+
+// Change the cursor to a pointer when the mouse is over the states layer.
+map.on('mouseenter', 'states-layer', function () {
+map.getCanvas().style.cursor = 'pointer';
+});
+
+// Change it back to a pointer when it leaves.
+map.on('mouseleave', 'states-layer', function () {
+map.getCanvas().style.cursor = '';
+});
+
+
+
+// d3.json('car2latest.geojson', function(err, geojson) {
+//       if (err) throw err;
+
+    map.addImage('pulsing-dot2', pulsingDot, { pixelRatio: 2 });
+
+    map.addSource('Car2', {
+          type: 'geojson',
+          lineMetrics: true,
+          data: car2url
+      });
+
+    map.addLayer({
+        "id": "Car2 LIVE Location",
+        "type": "symbol",
+        "source": "Car2",
+        "layout": {
+            "icon-image": "pulsing-dot"
+        }
+    });
+// });
+
+
+
+////////////////CAR1///////////////////
+// d3.json('car1today.geojson', function(err, dataset) {
+//       if (err) throw err;
+
+      map.addSource('Day1', {
+          type: 'geojson',
+          lineMetrics: true,
+          data: car1today
+      });
+
+
+    map.addLayer({
+        "id": "Car1 route",
+        "type": "line",
+        "source": "Day1",
+        "layout": {
+            "line-join": "round",
+            "line-cap": "butt"
+        },
+        "paint": {
+            "line-color": "#ffffff",
+            "line-width": 3
+        }
+    });
+
+    var dashLength = 2;
+    var gapLength = 3;
+
+    // We divide the animation up into 40 steps to make careful use of the finite space in
+    // LineAtlas
+    var steps = 40;
+    // A # of steps proportional to the dashLength are devoted to manipulating the dash
+    var dashSteps = steps * dashLength / (gapLength + dashLength);
+    // A # of steps proportional to the gapLength are devoted to manipulating the gap
+    var gapSteps = steps - dashSteps;
+
+    // The current step #
+    var step = 0;
+
+    setInterval(function() {
+        step = step + 1;
+        if (step >= steps) step = 0;
+
+        var t, a, b, c, d;
+        if (step < dashSteps) {
+          t = step / dashSteps;
+          a = (1 - t) * dashLength;
+          b = gapLength;
+          c = t * dashLength;
+          d = 0;
+        } else {
+          t = (step - dashSteps) / (gapSteps);
+          a = 0;
+          b = (1 - t) * gapLength;
+          c = dashLength;
+          d = t * gapLength;
+        }
+
+        map.setPaintProperty("Car1 route", "line-dasharray", [d, c, b, a]);
+    }, 25);
+// });
+
+////////////////CAR2///////////////////
+// d3.json('car2today.cu', function(err, dataset2) {
+//       if (err) throw err;
+
+      map.addSource('Day2', {
+          type: 'geojson',
+          lineMetrics: true,
+          data: car2today
+      });
+
+
+    map.addLayer({
+        "id": "Car2 route",
+        "type": "line",
+        "source": "Day2",
+        "layout": {
+            "line-join": "round",
+            "line-cap": "butt"
+        },
+        "paint": {
+            "line-color": "#ffffff",
+            "line-width": 3
+        }
+    });
+
+    var dashLength = 2;
+    var gapLength = 10;
+
+    // We divide the animation up into 40 steps to make careful use of the finite space in
+    // LineAtlas
+    var steps = 40;
+    // A # of steps proportional to the dashLength are devoted to manipulating the dash
+    var dashSteps = steps * dashLength / (gapLength + dashLength);
+    // A # of steps proportional to the gapLength are devoted to manipulating the gap
+    var gapSteps = steps - dashSteps;
+
+    // The current step #
+    var step = 0;
+
+    setInterval(function() {
+        step = step + 1;
+        if (step >= steps) step = 0;
+
+        var t, a, b, c, d;
+        if (step < dashSteps) {
+          t = step / dashSteps;
+          a = (1 - t) * dashLength;
+          b = gapLength;
+          c = t * dashLength;
+          d = 0;
+        } else {
+          t = (step - dashSteps) / (gapSteps);
+          a = 0;
+          b = (1 - t) * gapLength;
+          c = dashLength;
+          d = t * gapLength;
+        }
+
+        map.setPaintProperty("Car2 route", "line-dasharray", [d, c, b, a]);
+    }, 25);
+// });
+
+
+
+
+
+
+      // update hour filter when the slider is dragged
+      document.getElementById('slider').addEventListener('input', function (e) {
+        var hour = parseInt(e.target.value);
+        // update the map
+        map.setFilter('Heatmap', ['==', ['number', ['get', 'logtime']], hour]);
+        // converting 0-23 hour to AMPM format
+        var ampm = hour >= 12 ? 'PM' : 'AM';
+        var hour12 = hour % 12 ? hour % 12 : 12;
+        // update text in the UI
+        document.getElementById('active-hour').innerText = hour12 + ampm;
+      });
+
+      document.getElementById('filters').addEventListener('change', function(e) {
+      var day = e.target.value;
+      // update the map filter
+      if (day === 'all') {
+        filterDay = ['!=', ['string', ['get','day']], 'placeholder'];
+      } else if (day === 'weekday') {
+        filterDay = ['match', ['get', 'day'], ['Saturday', 'Sunday'], false, true];
+      } else if (day === 'weekend') {
+        filterDay = ['match', ['get', 'day'], ['Saturday', 'Sunday'], true, false];
+      } else {
+        console.log('error');
+      };
+      map.setFilter('Heatmap', ['all', filterHour, filterDay]);
+      map.setFilter('Mini stops', ['all', filterDay]);
+
+    });
+
+
+
+    });
+
+
+
+
+var toggleableLayerIds = [ 'HAUPcar stations', 'Mini stops','Heatmap','Car1 Mini stops','Car2 Mini stops','Car1 route','Car2 route'];
+
+for (var i = 0; i < toggleableLayerIds.length; i++) {
+    var id = toggleableLayerIds[i];
+
+    var link = document.createElement('a');
+    link.href = '#';
+    link.className = 'active';
+    link.textContent = id;
+
+    link.onclick = function (e) {
+        var clickedLayer = this.textContent;
+        e.preventDefault();
+        e.stopPropagation();
+
+        var visibility = map.getLayoutProperty(clickedLayer, 'visibility');
+
+        if (visibility === 'visible') {
+            map.setLayoutProperty(clickedLayer, 'visibility', 'none');
+            this.className = '';
+        } else {
+            this.className = 'active';
+            map.setLayoutProperty(clickedLayer, 'visibility', 'visible');
+        }
+    };
+
+    var layers = document.getElementById('menu');
+    layers.appendChild(link);
+}
+
+
+
+
+
+
+
+
+var toggleableLayerIds2 = ['Toyota Vios','Toyota ALTIS', 'Mazda 2'];
+
+for (var i = 0; i < toggleableLayerIds2.length; i++) {
+    var id2 = toggleableLayerIds2[i];
+
+    var link2 = document.createElement('a');
+    link2.href = '#';
+    link2.className = 'active';
+    link2.textContent = id2;
+
+    link2.onclick = function (e) {
+        var clickedLayer2 = this.textContent;
+        e.preventDefault();
+        e.stopPropagation();
+
+        var visibility2 = map.getLayoutProperty(clickedLayer2, 'visibility');
+
+        if (visibility2 === 'visible') {
+            map.setLayoutProperty(clickedLayer2, 'visibility', 'none');
+            this.className = '';
+        } else {
+            this.className = 'active';
+            map.setLayoutProperty(clickedLayer2, 'visibility', 'visible');
+        }
+    };
+
+    var layers2 = document.getElementById('menu2');
+    layers2.appendChild(link2);
+}
+
+  </script>
+
+
+
+
+
+<script>
+
+    new Chart(document.getElementById("line-chart2"), {
+      type: 'line',
+      data: {
+        labels: ["19-08-14","19-08-15","19-08-16","19-08-17","19-08-18","19-08-19","19-08-20","19-08-21","19-08-22","19-08-23","19-08-24","19-08-25","19-08-26","19-08-27","19-08-28","19-08-29","19-08-30","19-08-31","19-09-01","19-09-02","19-09-03","19-09-04","19-09-05","19-09-06","19-09-07","19-09-08","19-09-09","19-09-10","19-09-11","19-09-12","19-09-13","19-09-14","19-09-15","19-09-16","19-09-17","19-09-18"],
+        datasets: [{
+            data: [3.5537065988800003, 98.62000959200002, 99.39586528000001, 144.17039712800002, 117.515385616, 0.24698121003999998, 102.60528261200001, 97.73944254, 79.1394006564, 63.303416258000006, 104.2557386, 64.148690684, 0.24889052284000002, 33.73617322, 78.601249628, 64.75230646520001, 105.080740688, 187.68407872800003, 169.17601470000002, 0.0, 35.8901301476, 39.736306858800006, 105.25682188, 42.0490497328, 101.24981846000001, 10.7487613684, 30.669876911600003, 0.057157392, 59.739079118, 57.378998628400005, 84.16031790640001, 64.4359160088, 63.5558926676, 0.10667891648000001, 61.4503496912, 96.05509301600001, 37.3256289452],
+            label: "EV2",
+            borderColor: "#269404",
+            //backgroundColor: "#269404",
+            fill: true
+          }, {
+            data: [5.9872230742, 166.15327703000003, 167.4604252, 242.89577777000002, 197.98787794, 0.41610964735, 172.867595705, 164.669712975, 133.3326858885, 106.6524947825, 175.64825525, 108.07659843500001, 0.41932642435000006, 56.838117925, 132.426018395, 109.0935598055, 177.03820442, 316.20687177, 285.024807375, 0.0, 60.4670670965, 66.94703872950001, 177.33486295, 70.843507702, 170.58393327500002, 18.1093262185, 51.6720752315, 0.09629778, 100.6473615575, 96.67113899350001, 141.79183995100001, 108.560510667, 107.0778626465, 0.17973078320000002, 103.530480458, 161.83195019000001, 62.885570505500006],
+            label: "Toyota Vios",
+            borderColor: "#8e5ea2",
+            //backgroundColor: "#8e5ea2",
+            fill: true
+          },{
+            data: [7.3391766716, 203.67175894, 205.2740696, 297.74321146, 242.69481811999998, 0.5100698902999999, 211.90221409, 201.85319654999998, 163.440066573, 130.735316185, 215.31076449999998, 132.48099163, 0.5140130363, 69.67253165, 162.32866771, 133.727589439, 217.01457315999997, 387.60842346, 349.38524775, 0.0, 74.120920957, 82.064111991, 217.3782191, 86.840428796, 209.10288595, 22.198528912999997, 63.339963187, 0.11804243999999998, 123.37418513499999, 118.500105863, 173.809352198, 133.074174366, 131.256734857, 0.22031515359999998, 126.908330884, 198.37464862000002, 77.085538039],
+            label: "Toyota Altis",
+            borderColor: "#3e95cd",
+            //backgroundColor: "#3e95cd",
+            fill: true
+          },{
+            data: [8.15034883004, 226.182848086, 227.96225624, 330.651671674, 269.51898222799997, 0.5664460360699999, 235.322985121, 224.16328669499998, 181.5044949837, 145.18500902649998, 239.10827005, 147.123627547, 0.57082500347, 77.373179885, 180.27025729899998, 148.5080072191, 241.000394404, 430.449354474, 388.001511975, 0.0, 82.31323327329999, 91.1343559479, 241.40423278999998, 96.4385814524, 232.214257555, 24.6520505297, 70.3406959603, 0.131089236, 137.0102792815, 131.5974859847, 193.0198595462, 147.7823725854, 145.7640581833, 0.24466577584, 140.9350411396, 220.300267678, 85.60551855909999],
+            label: "Mazda 2",
+            borderColor: "#FF0000",
+            //backgroundColor: "#FF0000",
+            fill: true
+          }
+        ]
+      },
+      options: {
+        title: {
+          display: true,
+          text: 'Cost Performance - Baht/km'
+        }
+      }
+    });
+</script>
+
+
+<script>
+
+  new Chart(document.getElementById("bar-chart-grouped"), {
+    type: 'bar',
+    data: {
+      labels: ["19-08-14","19-08-15","19-08-16","19-08-17","19-08-18","19-08-19","19-08-20","19-08-21","19-08-22","19-08-23","19-08-24","19-08-25","19-08-26","19-08-27","19-08-28","19-08-29","19-08-30","19-08-31","19-09-01","19-09-02","19-09-03","19-09-04","19-09-05","19-09-06","19-09-07","19-09-08","19-09-09","19-09-10","19-09-11","19-09-12","19-09-13","19-09-14","19-09-15","19-09-16","19-09-17","19-09-18"],
+      datasets: [{
+          data: [0.22454017890532, 6.231283866938001, 6.2803061399199995, 9.109375201141999, 7.425184093324, 0.015605454064809999, 6.483092476343, 6.175645429184999, 5.0004058262571, 3.9998125946495, 6.58737617915, 4.053221075501, 0.01572609357901, 2.131612770955, 4.966402870516999, 4.0913604074153, 6.639503756731999, 11.858777713541999, 10.689349711425, 0.0, 2.2677100711738998, 2.5107299105457, 6.6506294085699995, 2.6568600662692, 6.397447768565001, 0.6791581503751, 1.9378695052949002, 0.0036114773879999994, 3.7746007273145, 3.6254795546401, 5.317651391194601, 4.0713693452082, 4.0157652617038995, 0.00674048414672, 3.8827269864668, 6.069220170674, 2.3584117506353],
+          label: "EV2",
+          borderColor: "#269404",
+          backgroundColor: "#269404",
+          fill: true
+        }, {
+          data: [0.6157182955016, 17.08698861844, 17.2214140496, 24.979088371960003, 20.36081789912, 0.0427921792178, 17.77748048734, 16.9344208053, 13.711761374598, 10.96800494731, 18.063439927, 11.11445792938, 0.0431229884138, 5.8451587079000005, 13.61852085946, 11.219040924514, 18.20638050616, 32.51830668396, 29.311583416500003, 0.0, 6.218355158182, 6.884747079666, 18.236888486599998, 7.285454921096, 17.5426315897, 1.862339741438, 5.313889543162, 0.00990313944, 10.35044479501, 9.941535197138, 14.581689863348002, 11.164222838916, 11.011749229582, 0.0184832818336, 10.646941022583999, 16.64258894212, 6.467070928114],
+          label: "Toyota Vios",
+          borderColor: "#8e5ea2",
+          backgroundColor: "#8e5ea2",
+          fill: true
+        },{
+          data: [0.757094014544, 21.010349869600006, 21.175640864000002, 30.7145628664, 25.035886500800004, 0.052617736052, 21.859386295600004, 20.822750802, 16.860133183320002, 13.486379985400001, 22.21100518, 13.666460189200002, 0.05302450269200001, 7.187271686, 16.7454836164, 13.795056594760002, 22.3867664944, 39.984868946400006, 36.04184661000001, 0.0, 7.646158161880001, 8.465561026440001, 22.424279444, 8.95827581264, 21.570613498000004, 2.28995350892, 6.53401725508, 0.0121770096, 12.727021203400001, 12.224221446920001, 17.929806858320003, 13.72765167144, 13.54016843788, 0.022727247424000004, 13.091596238560001, 20.463911120800002, 7.95198181876],
+          label: "Toyota Altis",
+          borderColor: "#3e95cd",
+          backgroundColor: "#3e95cd",
+          fill: true
+        },{
+          data: [0.8393700477572, 23.293617482980004, 23.4768712232, 34.052420973820006, 27.756623146040003, 0.05833588798009999, 24.234921643030003, 23.085631373850003, 18.692382350691002, 14.951991687895, 24.6247521715, 15.15164183221, 0.0587868593621, 7.96833743555, 18.565273417569998, 15.294213255313002, 24.819614077719997, 44.33016337782, 39.958639124250006, 0.0, 8.477092696819, 9.385542913497, 24.8612036897, 9.931802724932, 23.91476690365, 2.5388107014709997, 7.244091579229, 0.013500327480000001, 14.110110752545, 13.552670002121001, 19.878301175066, 15.219483205122001, 15.011625518118999, 0.0251970962512, 14.514305421628, 22.687795339540003, 8.816151271513],
+          label: "Mazda 2",
+          borderColor: "#FF0000",
+          backgroundColor: "#FF0000",
+          fill: true
+        }
+      ]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'Co2 Emission in kg / 100km'
+      }
+    }
+  });
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
